@@ -22,6 +22,7 @@ for j in {1..12}; do python extractpage2.py https://www.slideshare.net/$name/pre
 cat list.txt | grep "/$name/" | grep -v "/presentations" | grep -v "/clipboards" | grep -v "/documents" | grep -v "/videos" | grep -v "/infographics" | grep -v "/followers" > list2.txt
 ```
 # Retrieve the slides
+Retrieving all slides:
 ```
 for i in `cat list2.txt`; do python3 convertpdf.py https://www.slideshare.net$i; done
 ```
