@@ -15,9 +15,10 @@ Remember how many pages that this channel contains (e.g., NVIDIA has 12 pages).
 Download all links :
 ```
 name="NVIDIA"
+
 cd ~/slideshare-downloader
 rm list.txt
-for j in {1..30}; do python extractpage2.py https://www.slideshare.net/$name/presentations/$j >> list.txt; done
+for j in {1..12}; do python extractpage2.py https://www.slideshare.net/$name/presentations/$j >> list.txt; done
 cat list.txt | grep "/$name/" | grep -v "/presentations" | grep -v "/clipboards" | grep -v "/documents" | grep -v "/videos" | grep -v "/infographics" | grep -v "/followers" > list2.txt
 ```
 # Retrieve the slides
